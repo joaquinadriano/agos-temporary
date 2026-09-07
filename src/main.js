@@ -6,7 +6,7 @@ app.innerHTML = `
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#top" aria-label="AGOS home">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-mascot"><img src="./mascot.png" alt="" /></span>
         <span>agos<span class="brand-dot">.</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -32,11 +32,12 @@ app.innerHTML = `
             <button class="play-button" aria-label="Play AGOS story"><span class="play-icon">▶</span><span>See how AGOS works</span></button>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Ferry crossing on the Pasig River">
-          <div class="image-frame"></div>
+        <div class="hero-visual" aria-label="AGOS mascot guiding your Pasig River ferry ride">
+          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          <div class="mascot-stage"><img src="./mascot.png" alt="AGOS ferry mascot" /></div>
           <div class="image-caption"><span class="caption-number">01</span><span class="caption-rule"></span><span>Pasig River / 06:42 AM</span></div>
           <div class="live-pill"><span class="pulse"></span> Live across the river</div>
-          <div class="compass"><span>N</span><span>E</span><span>S</span><span>W</span><b></b></div>
+          <div class="floating-note"><strong>Hi, Jamie!</strong><span>Your ride is ready.</span></div>
         </div>
       </section>
 
@@ -67,7 +68,7 @@ app.innerHTML = `
 
       <section class="statement" id="how-it-works"><p class="eyebrow"><span class="eyebrow-line"></span> Less waiting. More arriving.</p><h2>There’s a better<br /><em>way across.</em></h2><p>Built for the little moments between where you are and where you’re going.</p><a href="#routes" class="text-link">Explore your routes <span>→</span></a></section>
     </main>
-    <footer><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>agos<span class="brand-dot">.</span></span></a><span>Smart transit for the Pasig River</span><span>© 2024 AGOS</span></footer>
+    <footer><a class="brand footer-brand" href="#top"><span class="brand-mascot"><img src="./mascot.png" alt="" /></span><span>agos<span class="brand-dot">.</span></span></a><span>Smart transit for the Pasig River</span><span>© 2024 AGOS</span></footer>
 
     <div class="schedule-modal" role="dialog" aria-modal="true" aria-labelledby="schedule-title" hidden>
       <div class="modal-panel"><button class="close-modal" aria-label="Close schedule">×</button><p class="eyebrow dark"><span class="eyebrow-line"></span> Escolta to Guadalupe</p><h2 id="schedule-title">Today's crossings</h2><div class="schedule-list"><div><strong>07:10</strong><span>Ferry 04 · On time</span><b>32 min</b></div><div><strong>07:40</strong><span>Ferry 02 · On time</span><b>32 min</b></div><div><strong>08:10</strong><span>Ferry 06 · Boarding</span><b>32 min</b></div><div><strong>08:40</strong><span>Ferry 01 · Scheduled</span><b>32 min</b></div></div><button class="primary-button modal-button">Set a reminder <span>↗</span></button></div>

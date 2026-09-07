@@ -1,8 +1,8 @@
-(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))o(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const i of a.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&o(i)}).observe(document,{childList:!0,subtree:!0});function l(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function o(s){if(s.ep)return;s.ep=!0;const a=l(s);fetch(s.href,a)}})();const c=document.querySelector("#app");c.innerHTML=`
+(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))i(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const r of a.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&i(r)}).observe(document,{childList:!0,subtree:!0});function l(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(s){if(s.ep)return;s.ep=!0;const a=l(s);fetch(s.href,a)}})();const c=document.querySelector("#app");c.innerHTML=`
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="#top" aria-label="AGOS home">
-        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-mascot"><img src="./mascot.png" alt="" /></span>
         <span>agos<span class="brand-dot">.</span></span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
@@ -28,11 +28,12 @@
             <button class="play-button" aria-label="Play AGOS story"><span class="play-icon">▶</span><span>See how AGOS works</span></button>
           </div>
         </div>
-        <div class="hero-visual" aria-label="Ferry crossing on the Pasig River">
-          <div class="image-frame"></div>
+        <div class="hero-visual" aria-label="AGOS mascot guiding your Pasig River ferry ride">
+          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+          <div class="mascot-stage"><img src="./mascot.png" alt="AGOS ferry mascot" /></div>
           <div class="image-caption"><span class="caption-number">01</span><span class="caption-rule"></span><span>Pasig River / 06:42 AM</span></div>
           <div class="live-pill"><span class="pulse"></span> Live across the river</div>
-          <div class="compass"><span>N</span><span>E</span><span>S</span><span>W</span><b></b></div>
+          <div class="floating-note"><strong>Hi, Jamie!</strong><span>Your ride is ready.</span></div>
         </div>
       </section>
 
@@ -63,10 +64,10 @@
 
       <section class="statement" id="how-it-works"><p class="eyebrow"><span class="eyebrow-line"></span> Less waiting. More arriving.</p><h2>There’s a better<br /><em>way across.</em></h2><p>Built for the little moments between where you are and where you’re going.</p><a href="#routes" class="text-link">Explore your routes <span>→</span></a></section>
     </main>
-    <footer><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>agos<span class="brand-dot">.</span></span></a><span>Smart transit for the Pasig River</span><span>© 2024 AGOS</span></footer>
+    <footer><a class="brand footer-brand" href="#top"><span class="brand-mascot"><img src="./mascot.png" alt="" /></span><span>agos<span class="brand-dot">.</span></span></a><span>Smart transit for the Pasig River</span><span>© 2024 AGOS</span></footer>
 
     <div class="schedule-modal" role="dialog" aria-modal="true" aria-labelledby="schedule-title" hidden>
       <div class="modal-panel"><button class="close-modal" aria-label="Close schedule">×</button><p class="eyebrow dark"><span class="eyebrow-line"></span> Escolta to Guadalupe</p><h2 id="schedule-title">Today's crossings</h2><div class="schedule-list"><div><strong>07:10</strong><span>Ferry 04 · On time</span><b>32 min</b></div><div><strong>07:40</strong><span>Ferry 02 · On time</span><b>32 min</b></div><div><strong>08:10</strong><span>Ferry 06 · Boarding</span><b>32 min</b></div><div><strong>08:40</strong><span>Ferry 01 · Scheduled</span><b>32 min</b></div></div><button class="primary-button modal-button">Set a reminder <span>↗</span></button></div>
     </div>
   </div>
-`;const n=document.querySelector(".schedule-modal"),d=()=>{n.hidden=!1,document.body.classList.add("modal-open")},r=()=>{n.hidden=!0,document.body.classList.remove("modal-open")};document.querySelectorAll(".schedule-trigger").forEach(e=>e.addEventListener("click",d));document.querySelector(".close-modal").addEventListener("click",r);n.addEventListener("click",e=>{e.target===n&&r()});document.addEventListener("keydown",e=>{e.key==="Escape"&&r()});document.querySelector("[data-scroll]").addEventListener("click",()=>document.querySelector("#routes").scrollIntoView({behavior:"smooth"}));document.querySelector(".menu-button").addEventListener("click",()=>document.querySelector(".desktop-nav").classList.toggle("menu-open"));document.querySelector(".play-button").addEventListener("click",e=>{e.currentTarget.classList.toggle("playing"),e.currentTarget.querySelector("span:last-child").textContent=e.currentTarget.classList.contains("playing")?"Playing AGOS story":"See how AGOS works"});
+`;const t=document.querySelector(".schedule-modal"),d=()=>{t.hidden=!1,document.body.classList.add("modal-open")},o=()=>{t.hidden=!0,document.body.classList.remove("modal-open")};document.querySelectorAll(".schedule-trigger").forEach(e=>e.addEventListener("click",d));document.querySelector(".close-modal").addEventListener("click",o);t.addEventListener("click",e=>{e.target===t&&o()});document.addEventListener("keydown",e=>{e.key==="Escape"&&o()});document.querySelector("[data-scroll]").addEventListener("click",()=>document.querySelector("#routes").scrollIntoView({behavior:"smooth"}));document.querySelector(".menu-button").addEventListener("click",()=>document.querySelector(".desktop-nav").classList.toggle("menu-open"));document.querySelector(".play-button").addEventListener("click",e=>{e.currentTarget.classList.toggle("playing"),e.currentTarget.querySelector("span:last-child").textContent=e.currentTarget.classList.contains("playing")?"Playing AGOS story":"See how AGOS works"});
