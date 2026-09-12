@@ -34,7 +34,7 @@ app.innerHTML = `
         </div>
         <div class="hero-visual" aria-label="AGOS mascot guiding your Pasig River ferry ride">
           <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-          <div class="mascot-stage"><img src="./mascot.png" alt="AGOS ferry mascot" /></div>
+          <div class="mascot-stage"><img src="./mascot.png" alt="" /></div>
           <div class="image-caption"><span class="caption-number">01</span><span class="caption-rule"></span><span>Pasig River / 06:42 AM</span></div>
           <div class="live-pill"><span class="pulse"></span> Live across the river</div>
           <div class="floating-note"><strong>Hi, Jamie!</strong><span>Your ride is ready.</span></div>
